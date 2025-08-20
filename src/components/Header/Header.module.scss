@@ -1,0 +1,39 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.header {
+  background: $color-bg-header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.logo {
+  img {
+    display: block;
+    max-height: 100%;
+    width: 14.4rem;
+    height: 3.9rem;
+
+    // @include respond("sm") {
+    //   width: 8.4rem;
+    //   height: 2.6rem;
+    // }
+  }
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: $color-magenta-primary;
+  width: 0%;
+  transition: width 0.1s ease-out;
+}

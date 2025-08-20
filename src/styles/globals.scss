@@ -1,0 +1,14 @@
+@import "./variables";
+@import "./mixins";
+@import "./fonts";
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  margin: 0;
+  font-family: "Gotham HTF", sans-serif;
+  background: $color-bg-primary;
+  color: $color-text-primary;
+}

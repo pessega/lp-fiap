@@ -1,0 +1,64 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.hero {
+  background: $color-bg-primary;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+}
+
+.content {
+  position: relative;
+}
+
+.title {
+  font-family: "Gotham HTF", sans-serif;
+  font-weight: 400;
+  font-size: 11rem;
+  color: $color-text-primary;
+  z-index: 20;
+  position: relative;
+
+  @include respond("sm") {
+    font-size: 3.6rem;
+  }
+
+  // @include respond("lg") {
+  //   font-size: 11.2rem;
+  // }
+
+  // @include respond("xl") {
+  //   font-size: 11.4rem;
+  // }
+}
+
+.title:first-of-type {
+  margin-left: 7.6rem;
+  margin-bottom: -11rem;
+
+  @include respond("sm") {
+    margin-left: 1.5rem;
+    margin-bottom: -3rem;
+  }
+}
+
+.subtitle {
+  font-family: "Gotham HTF", sans-serif;
+  font-weight: 800;
+  font-size: 35rem;
+  color: $color-text-quaternary;
+  // color: RED;
+  position: absolute;
+  top: -13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+
+  @include respond("sm") {
+    font-size: 15rem;
+  }
+}
