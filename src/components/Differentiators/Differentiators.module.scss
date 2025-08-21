@@ -1,0 +1,51 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins";
+
+.differentiators {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+
+  overflow-x: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 149.5rem;
+
+  @include respond("sm") {
+    display: none;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 7.7rem;
+  }
+
+  .revealMask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $color-bg-primary;
+    z-index: 2;
+  }
+}
+
+.outlinedTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 12.1rem;
+  margin-top: -17rem;
+
+  @include respond("sm") {
+    display: none;
+  }
+}
