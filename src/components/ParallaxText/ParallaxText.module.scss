@@ -6,8 +6,8 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: var(--accent);
-  bottom: 100px;
+  background: $color-magenta-accent;
+  bottom: 10rem;
 }
 
 .parallax {
@@ -19,19 +19,42 @@
   display: flex;
   flex-wrap: nowrap;
 
-  border-bottom: 1px solid $color-text-primary;
-  padding: 2.5rem 0;
+  padding: 0;
+  margin: 0;
 }
 
 .scroller {
-  font-size: 8.3rem;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 64px;
+  font-size: 8.3rem;
   display: flex;
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
+
+  @include respond("sm") {
+    font-size: 3.5rem;
+  }
+}
+
+.scrollerBig {
+  font-size: 14.4rem;
+}
+
+.outlined {
+  .scroller span {
+    color: transparent;
+    -webkit-text-stroke: 2px $color-text-stroke;
+  }
+}
+
+.border {
+  border-bottom: 1px solid $color-text-primary;
+  padding: 2.5rem 0;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .parallax span {

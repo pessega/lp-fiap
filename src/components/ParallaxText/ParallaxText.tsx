@@ -16,11 +16,19 @@ import { wrap } from "@motionone/utils";
 interface ParallaxProps {
   children: string;
   baseVelocity: number;
+  outlined?: boolean;
+  divLine?: boolean;
+  italic?: boolean;
+  fontSize?: "normal" | "big";
 }
 
 export default function ParallaxText({
   children,
   baseVelocity = 100,
+  outlined = false,
+  divLine = false,
+  italic = false,
+  fontSize = "normal",
 }: ParallaxProps) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
@@ -49,8 +57,20 @@ export default function ParallaxText({
     baseX.set(baseX.get() + moveBy);
   });
   return (
-    <div className={styles.parallax}>
-      <motion.div className={styles.scroller} style={{ x }}>
+    <div
+      className={`${styles.parallax} ${divLine ? styles.border : ""} ${
+        italic ? styles.italic : ""
+      } ${outlined ? styles.outlined : ""}`}
+    >
+      <motion.div
+        className={`${styles.scroller} ${
+          fontSize === "big" && styles.scrollerBig
+        }`}
+        style={{ x }}
+      >
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
