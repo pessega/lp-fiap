@@ -1,0 +1,111 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.accordionItem {
+  border-bottom: 0.1rem solid $color-divider-secondary;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .accordionHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.4rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+
+    .accordionTitle {
+      font-family: "Gotham HTF", sans-serif;
+      font-size: 3rem;
+      font-weight: 500;
+      color: $color-text-primary;
+    }
+
+    .accordionIcon {
+      position: relative;
+      width: 59.71px;
+      height: 57.77px;
+      border-radius: 50%;
+      border: 0.1rem solid $color-magenta-accent;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+
+      &.active {
+        background: $color-magenta-primary;
+        border-color: $color-magenta-secondary;
+      }
+
+      .iconLine {
+        position: absolute;
+        width: 1.2rem;
+        height: 0.2rem;
+        background-color: $color-magenta-accent;
+        transition: all 0.3s ease;
+
+        &:first-child {
+          transform: rotate(0deg);
+        }
+
+        &.active:first-child {
+          transform: rotate(45deg);
+          background-color: $color-text-primary;
+        }
+
+        &:last-child {
+          transform: rotate(90deg);
+        }
+
+        &.active:last-child {
+          transform: rotate(-45deg);
+          background-color: $color-text-primary;
+        }
+      }
+    }
+  }
+
+  .accordionContent {
+    overflow: hidden;
+
+    .accordionInner {
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+/* Course content styling for mobile accordion */
+.courseItem {
+  padding: 1.5rem 0;
+  border-bottom: 0.1rem solid $color-divider;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .courseModality {
+    font-family: "Gotham HTF", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-text-tertiary;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .courseName {
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $color-text-tertiary;
+    margin: 0;
+    line-height: 1.4;
+  }
+}

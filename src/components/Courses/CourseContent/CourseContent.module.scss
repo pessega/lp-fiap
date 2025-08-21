@@ -1,0 +1,137 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.content {
+  position: relative;
+  min-height: 40rem;
+
+  .panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .categoryTitle {
+    font-family: "Gotham HTF", sans-serif;
+    font-size: 5.5rem;
+    font-weight: 400;
+    color: $color-text-primary;
+    margin: 0 0 9.2rem 0;
+    line-height: 1.2;
+    text-transform: capitalize;
+
+    @include respond("sm") {
+      display: none;
+    }
+  }
+
+  .courseList {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+
+    .courseItem {
+      position: relative;
+
+      .courseContent {
+        padding: 2.4rem 0;
+        display: flex;
+        align-items: flex-end;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid $color-text-primary;
+
+        .courseTitle {
+          font-family: "PT Sans", sans-serif;
+          font-size: 2.2rem;
+          font-weight: 400;
+          color: $color-text-tertiary;
+          margin: 0 1.6rem 0 0;
+          transition: color 0.3s ease;
+        }
+
+        .courseTags {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+
+          .tag {
+            font-family: "Gotham HTF", sans-serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: $color-text-tertiary;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+
+            &:not(:last-child)::after {
+              content: "•";
+              margin-left: 1rem;
+              color: $color-text-tertiary;
+            }
+          }
+        }
+
+        &:hover {
+          border-color: $color-magenta-accent;
+
+          .courseTitle {
+            color: $color-magenta-accent;
+          }
+
+          .tag {
+            color: $color-magenta-accent;
+
+            &:not(:last-child)::after {
+              color: $color-magenta-accent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Mobile styles */
+  .mobileItem {
+    position: relative;
+
+    .mobileContent {
+      padding: 1.6rem 0;
+
+      .mobileTitle {
+        font-family: "PT Sans", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: $color-text-tertiary;
+        margin: 0 0 0.8rem 0;
+        line-height: 1.4;
+      }
+
+      .mobileTags {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+
+        .mobileTag {
+          font-family: "Gotham HTF", sans-serif;
+          font-size: 1rem;
+          font-weight: 400;
+          color: $color-text-tertiary;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+
+          &:not(:last-child)::after {
+            content: "•";
+            margin-left: 0.8rem;
+            color: $color-text-tertiary;
+          }
+        }
+      }
+
+      .mobileDivider {
+        height: 0.1rem;
+        background-color: $color-divider;
+        width: 100%;
+      }
+    }
+  }
+}

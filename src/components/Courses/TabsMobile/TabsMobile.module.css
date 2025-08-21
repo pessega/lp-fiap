@@ -1,0 +1,109 @@
+/* Converting TabsMobile SCSS to CSS modules */
+.accordionItem {
+  border-bottom: 0.1rem solid var(--color-divider-secondary, #333333);
+}
+
+.accordionItem:last-child {
+  border-bottom: none;
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordionTitle {
+  font-family: "Gotham HTF", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--color-text-primary, #ffffff);
+}
+
+.accordionIcon {
+  position: relative;
+  width: 59.71px;
+  height: 57.77px;
+  border-radius: 50%;
+  border: 0.1rem solid var(--color-magenta-accent, #ff0066);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordionIcon.active {
+  background: var(--color-magenta-primary, #ff0066);
+  border-color: var(--color-magenta-secondary, #cc0052);
+}
+
+.iconLine {
+  position: absolute;
+  width: 1.2rem;
+  height: 0.2rem;
+  background-color: var(--color-magenta-accent, #ff0066);
+  transition: all 0.3s ease;
+}
+
+.iconLine:first-child {
+  transform: rotate(0deg);
+}
+
+.iconLine.active:first-child {
+  transform: rotate(45deg);
+  background-color: var(--color-text-primary, #ffffff);
+}
+
+.iconLine:last-child {
+  transform: rotate(90deg);
+}
+
+.iconLine.active:last-child {
+  transform: rotate(-45deg);
+  background-color: var(--color-text-primary, #ffffff);
+}
+
+.accordionContent {
+  overflow: hidden;
+}
+
+.accordionInner {
+  padding-bottom: 2rem;
+}
+
+/* Course content styling for mobile accordion */
+.courseItem {
+  padding: 1.5rem 0;
+  border-bottom: 0.1rem solid var(--color-divider, #444444);
+}
+
+.courseItem:last-child {
+  border-bottom: none;
+}
+
+.courseModality {
+  font-family: "Gotham HTF", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-tertiary, #cccccc);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.courseName {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-text-tertiary, #cccccc);
+  margin: 0;
+  line-height: 1.4;
+}

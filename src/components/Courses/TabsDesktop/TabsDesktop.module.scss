@@ -1,0 +1,50 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.tabs {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+
+  .tab {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      .tabText {
+        color: $color-text-primary;
+      }
+    }
+
+    &.active {
+      .tabText {
+        color: $color-text-primary;
+      }
+    }
+
+    .tabText {
+      font-family: "Gotham HTF", sans-serif;
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: $color-text-tertiary;
+      transition: color 0.3s ease;
+      display: block;
+      padding: 1rem 0;
+      position: relative;
+    }
+
+    .tabIndicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0.6rem;
+      background-color: $color-magenta-accent;
+      transform-origin: left;
+    }
+  }
+}
