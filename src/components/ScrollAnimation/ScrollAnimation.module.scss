@@ -1,0 +1,59 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  .canvas {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    object-fit: cover;
+  }
+
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+
+    .loadingText {
+      font-family: "Gotham HTF", sans-serif;
+      font-weight: 400;
+      font-size: 2rem;
+      color: $color-text-primary;
+      margin-bottom: 2rem;
+    }
+
+    .loadingBar {
+      width: 20rem;
+      height: 0.4rem;
+      background-color: $color-divider-secondary;
+      border-radius: 0.2rem;
+      overflow: hidden;
+
+      .loadingProgress {
+        height: 100%;
+        background-color: $color-magenta-primary;
+        transition: width 0.3s ease;
+        border-radius: 0.2rem;
+      }
+    }
+  }
+}
+
+@include respond("sm") {
+  .container {
+    display: none;
+  }
+}

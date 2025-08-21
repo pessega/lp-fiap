@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ParallaxText from "../ParallaxText/ParallaxText";
+import ParallaxText from "./ParallaxText/ParallaxText";
 import styles from "./Differentiators.module.scss";
 
 export default function Differentiators() {
