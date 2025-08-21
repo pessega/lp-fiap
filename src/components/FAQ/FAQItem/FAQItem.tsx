@@ -29,14 +29,11 @@ const FAQItem = ({
       onMouseLeave={onLeave}
     >
       <motion.div
-        className={styles.line}
+        className={isActive ? styles.lineActive : styles.line}
         initial={{ width: "6.5rem" }}
         animate={{
           width: isActive ? "98%" : "6.5rem",
           borderColor: isActive
-            ? "$color-magenta-primary"
-            : "$color-text-secondary",
-          backgroundColor: isActive
             ? "$color-magenta-primary"
             : "$color-text-secondary",
         }}
