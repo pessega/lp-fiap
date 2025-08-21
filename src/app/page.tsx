@@ -3,7 +3,7 @@ import Differentiators from "@/components/Differentiators/Differentiators";
 import FAQ from "@/components/FAQ/FAQ";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
-import ParallaxText from "@/components/ParallaxText/ParallaxText";
+import ScrollAnimation from "@/components/ScrollAnimation/ScrollAnimation";
 
 export default function HomePage() {
   return (
@@ -11,7 +11,7 @@ export default function HomePage() {
       <Header />
       <Hero />
       <Differentiators />
-
+      <ScrollAnimation />
       <Courses />
       <FAQ />
     </>
