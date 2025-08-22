@@ -80,7 +80,7 @@ A página foi testada e funciona corretamente nos principais navegadores:
 1. Clone o repositório:
 
 ```bash
-git clone <https://github.com/pessega/lp-fiap.git>
+git clone https://github.com/pessega/lp-fiap.git
 cd lp-fiap
 ```
 
