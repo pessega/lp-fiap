@@ -23,8 +23,21 @@
   z-index: 20;
   position: relative;
 
+  @include respond("md") {
+    font-size: 6.5rem;
+    line-height: 180%;
+    top: 6vh;
+  }
+
   @include respond("sm") {
-    font-size: 3.6rem;
+    font-size: 5rem;
+    line-height: 70%;
+  }
+
+  @include respond("mobl") {
+    font-size: 2.9rem;
+    line-height: 120%;
+    top: 4vh;
   }
 }
 
@@ -33,7 +46,7 @@
   margin-bottom: -11rem;
 
   @include respond("sm") {
-    margin-left: 1.5rem;
+    margin-left: 3.5rem;
     margin-bottom: -3rem;
   }
 }
@@ -43,14 +56,25 @@
   font-weight: 800;
   font-size: 35rem;
   color: $color-text-quaternary;
-  // color: RED;
   position: absolute;
   top: -13%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
 
+  @include respond("md") {
+    font-size: 20rem;
+    top: 4vh;
+  }
+
   @include respond("sm") {
     font-size: 15rem;
+    line-height: 14rem;
+    top: 0;
+    text-align: right;
+  }
+
+  @include respond("mobl") {
+    font-size: 10rem;
   }
 }
