@@ -50,8 +50,7 @@ const itemVariants = {
     opacity: 1,
     y: 10,
     transition: {
-      duration: 0.3,
-      delay: 0.2,
+      duration: 0.2,
     },
   },
 };
