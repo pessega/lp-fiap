@@ -28,7 +28,7 @@ const contentVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       staggerChildren: 0.1,
     },
   },
@@ -50,8 +50,7 @@ const itemVariants = {
     opacity: 1,
     y: 10,
     transition: {
-      duration: 0.3,
-      delay: 0.3,
+      duration: 0.2,
     },
   },
 };

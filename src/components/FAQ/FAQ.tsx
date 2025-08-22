@@ -23,8 +23,6 @@ export default function FAQ() {
   };
 
   const handleItemClick = (id: number) => {
-    // Click behavior: if clicking on active item, keep it active
-    // If clicking on inactive item, make it active (deactivating previous)
     setActiveId(id);
   };
 

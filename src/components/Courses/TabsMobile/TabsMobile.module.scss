@@ -68,7 +68,6 @@
           transform: rotate(0deg);
           -webkit-text-stroke: 0;
           color: $color-bg-primary;
-          // transition-delay: 0.15s;
         }
       }
 
@@ -101,7 +100,6 @@
   }
 }
 
-/* Course content styling for mobile accordion */
 .courseItem {
   padding: 1.5rem 0;
   border-bottom: 0.1rem solid $color-divider;
