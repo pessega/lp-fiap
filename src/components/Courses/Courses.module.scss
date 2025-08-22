@@ -5,13 +5,17 @@
   background-color: $color-bg-primary;
   padding: 14.4rem 0;
 
+  @include respond("sm") {
+    padding: 19.5rem 0 9.8rem 0;
+  }
+
   .container {
     max-width: 135.5rem;
     margin: 0 auto;
     padding: 0 8rem;
 
     @include respond("sm") {
-      padding: 0 1.6rem;
+      padding: 0 3.1rem;
     }
   }
 
@@ -22,7 +26,7 @@
     align-items: flex-start;
 
     @include respond("sm") {
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
       flex-direction: column;
       gap: 2rem;
     }
@@ -46,6 +50,7 @@
 
     @include respond("sm") {
       font-size: 6.2rem;
+      margin: 0 0 3rem 0;
     }
   }
 
@@ -57,7 +62,6 @@
     margin: 0;
   }
 
-  /* Desktop Layout */
   .desktop,
   .desktopTabs,
   .desktopContent {
@@ -68,7 +72,6 @@
     }
   }
 
-  /* Mobile Layout */
   .mobile,
   .mobileContent {
     display: none;

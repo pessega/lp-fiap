@@ -79,16 +79,7 @@ export default function TabsMobile({
                 expandedMobile === category.id ? styles.active : ""
               }`}
             >
-              <span
-                className={`${styles.iconLine} ${
-                  expandedMobile === category.id ? styles.active : ""
-                }`}
-              />
-              <span
-                className={`${styles.iconLine} ${
-                  expandedMobile === category.id ? styles.active : ""
-                }`}
-              />
+              <span className={styles.icon}></span>
             </div>
           </button>
 
