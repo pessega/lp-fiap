@@ -28,45 +28,65 @@
 
     .accordionIcon {
       position: relative;
-      width: 59.71px;
-      height: 57.77px;
+      width: 60px;
+      height: 58px;
       border-radius: 50%;
       border: 0.1rem solid $color-magenta-accent;
       background: transparent;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.3s ease;
       flex-shrink: 0;
+
+      .icon {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          font-size: 3.7rem;
+          transition: all 0.3s ease;
+          -webkit-text-stroke: 1px $color-magenta-accent;
+          color: transparent;
+        }
+
+        &::before {
+          content: "+";
+          opacity: 1;
+          transform: rotate(0deg);
+        }
+
+        &::after {
+          content: "-";
+          opacity: 0;
+          transform: rotate(0deg);
+          -webkit-text-stroke: 0;
+          color: $color-bg-primary;
+          // transition-delay: 0.15s;
+        }
+      }
 
       &.active {
         background: $color-magenta-primary;
         border-color: $color-magenta-secondary;
-      }
 
-      .iconLine {
-        position: absolute;
-        width: 1.2rem;
-        height: 0.2rem;
-        background-color: $color-magenta-accent;
-        transition: all 0.3s ease;
-
-        &:first-child {
-          transform: rotate(0deg);
-        }
-
-        &.active:first-child {
-          transform: rotate(45deg);
-          background-color: $color-text-primary;
-        }
-
-        &:last-child {
+        .icon::before {
+          opacity: 0;
           transform: rotate(90deg);
+          color: $color-bg-primary;
         }
 
-        &.active:last-child {
-          transform: rotate(-45deg);
-          background-color: $color-text-primary;
+        .icon::after {
+          opacity: 1;
+          transform: rotate(0deg);
+          color: $color-bg-primary;
+          transition-delay: 0.25s;
         }
       }
     }

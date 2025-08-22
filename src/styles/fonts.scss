@@ -54,4 +54,37 @@
   font-style: normal;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@400;500;700&display=swap");
+@font-face {
+  font-family: "PT Sans";
+  src: url("../../public/fonts/ptsans/ptsans-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../../public/fonts/ptsans/ptsans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/roboto/roboto-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/roboto/roboto-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/roboto/roboto-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
