@@ -26,52 +26,37 @@ O projeto também incluiu **animações** em todas as seções e um **efeito de 
 - ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white) **Next.js** - Framework React para SSR/SSG e otimização de performance.
 - ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) **TypeScript** - Garantia de tipagem segura e escalabilidade.
 - ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white) **SCSS** - Organização modular de estilos, uso de variáveis e mixins.
-- ![Autoprefixer](https://img.shields.io/badge/Autoprefixer-FF69B4?style=for-the-badge&logo=autoprefixer&logoColor=white) **Autoprefixer** - Adiciona prefixos CSS automaticamente para compatibilidade entre navegadores.
 - ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white) **Framer Motion** - Animações fluidas e interativas para seções e elementos.
 - ![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white) **Yarn** - Gerenciador de pacotes.
 
 ---
 
-## 📱 Responsividade
+## 📦 Dependências do projeto
 
-A landing page foi testada e otimizada para as seguintes resoluções:
+As dependências abaixo estão listadas no arquivo `package.json`.
 
-| Desktop   | Tablets              | Mobile                  |
-| --------- | -------------------- | ----------------------- |
-| 3840x2160 | 1024x1366 (iPad Pro) | 414x736 (iPhone 8 Plus) |
-| 2560x1440 | 820x1180 (iPad Air)  | 360x640 (Galaxy S5)     |
-| 2560x1080 | 768x1024 (iPad)      | 320x568 (iPhone 5/SE)   |
-| 1920x1080 | -                    | -                       |
-| 1600x900  | -                    | -                       |
-| 1440x900  | -                    | -                       |
-| 1366x768  | -                    | -                       |
-| 1280x720  | -                    | -                       |
-| 1024x640  | -                    | -                       |
+### Dependências (`dependencies`)
 
-> Utilizamos **medidas relativas (rem, %) sempre que possível**, garantindo fluidez e consistência em diferentes tamanhos de tela.
+- **next** `15.5.0` – Framework React para SSR/SSG e otimização de performance.
+- **react** `19.1.0` – Biblioteca base para construção da UI.
+- **react-dom** `19.1.0` – Renderização da UI no navegador.
+- **framer-motion** `^12.23.12` – Animações fluidas e interativas.
+- **@motionone/utils** `^10.18.0` – Utilitários para animações.
+- **sass** `^1.90.0` – Estilização com SCSS/Sass.
 
----
+### Dependências de desenvolvimento (`devDependencies`)
 
-## 🌐 Compatibilidade com navegadores
-
-A página foi testada e funciona corretamente nos principais navegadores:
-
-- Google Chrome
-- Safari
-- Firefox
-- Edge
-- Opera
+- **typescript** `^5` – Tipagem estática.
+- **@types/node** `^20` – Tipos do Node.js para TypeScript.
+- **@types/react** `^19` – Tipos do React.
+- **@types/react-dom** `^19` – Tipos do React DOM.
+- **eslint** `^9` – Linter para padronização de código.
+- **eslint-config-next** `15.5.0` – Configurações recomendadas de ESLint para Next.js.
+- **@eslint/eslintrc** `^3` – Configuração base do ESLint.
+- **postcss** `^8.5.6` – Processador de CSS.
+- **autoprefixer** `^10.4.21` – Compatibilidade de CSS entre navegadores.
 
 ---
-
-## ✨ Funcionalidades
-
-- Layout fiel ao protótipo do Figma
-- Responsividade completa para múltiplos dispositivos
-- Animações fluidas em todas as seções usando **Framer Motion**
-- **Efeito de água** animado como bônus, aplicando técnicas de canvas/JS
-- Componentização e reutilização de SCSS com variáveis e mixins
-- SEO básico e otimização para carregamento rápido
 
 ---
 
@@ -121,6 +106,49 @@ http://localhost:3000
 ├── tsconfig.json
 └── yarn.lock
 ```
+
+---
+
+## 📱 Responsividade
+
+A landing page foi testada e otimizada para as seguintes resoluções:
+
+| Desktop   | Tablets              | Mobile                  |
+| --------- | -------------------- | ----------------------- |
+| 3840x2160 | 1024x1366 (iPad Pro) | 414x736 (iPhone 8 Plus) |
+| 2560x1440 | 820x1180 (iPad Air)  | 360x640 (Galaxy S5)     |
+| 2560x1080 | 768x1024 (iPad)      | 320x568 (iPhone 5/SE)   |
+| 1920x1080 | -                    | -                       |
+| 1600x900  | -                    | -                       |
+| 1440x900  | -                    | -                       |
+| 1366x768  | -                    | -                       |
+| 1280x720  | -                    | -                       |
+| 1024x640  | -                    | -                       |
+
+> Utilizamos **medidas relativas (rem, %) sempre que possível**, garantindo fluidez e consistência em diferentes tamanhos de tela.
+
+---
+
+## 🌐 Compatibilidade com navegadores
+
+A página foi testada e funciona corretamente nos principais navegadores:
+
+- Google Chrome
+- Safari
+- Firefox
+- Edge
+- Opera
+
+---
+
+## ✨ Funcionalidades
+
+- Layout fiel ao protótipo do Figma
+- Responsividade completa para múltiplos dispositivos
+- Animações fluidas em todas as seções usando **Framer Motion**
+- **Efeito de água** animado como bônus, aplicando técnicas de canvas/JS
+- Componentização e reutilização de SCSS com variáveis e mixins
+- SEO básico e otimização para carregamento rápido
 
 ---
 
