@@ -22,6 +22,26 @@
   color: $color-text-primary;
   z-index: 20;
   position: relative;
+  line-height: 12rem;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeSlideIn 0.4s ease-out forwards;
+
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+
+  &:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes fadeSlideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   @include respond("md") {
     font-size: 6.5rem;
@@ -61,6 +81,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
+
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out forwards;
+  animation-delay: 0.7s;
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
 
   @include respond("md") {
     font-size: 20rem;
