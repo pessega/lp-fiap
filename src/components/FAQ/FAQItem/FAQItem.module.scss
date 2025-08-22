@@ -6,7 +6,7 @@
   max-width: 43.5rem;
   transition: all 0.3s ease;
   width: 100%;
-  height: 22rem;
+  // height: 22rem;
   display: flex;
   flex-direction: column;
 
@@ -56,6 +56,10 @@
   @include respond("sm") {
     max-width: 100%;
     height: fit-content;
+
+    &:nth-last-child(-n + 2) {
+      height: 22rem;
+    }
 
     .answer p {
       font-size: 1.5rem;

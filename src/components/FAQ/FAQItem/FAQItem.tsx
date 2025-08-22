@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import styles from "./FAQItem.module.scss";
 
 interface FAQItemProps {
@@ -13,6 +14,22 @@ interface FAQItemProps {
   onLeave: () => void;
 }
 
+const useMediaQuery = (query: string) => {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    setMatches(media.matches);
+
+    const listener = () => setMatches(media.matches);
+    media.addEventListener("change", listener);
+
+    return () => media.removeEventListener("change", listener);
+  }, [query]);
+
+  return matches;
+};
+
 const FAQItem = ({
   question,
   answer,
@@ -21,6 +38,7 @@ const FAQItem = ({
   onHover,
   onLeave,
 }: FAQItemProps) => {
+  const isDesktop = useMediaQuery("(min-width: 769px)");
   return (
     <div
       className={`${styles.faqItem} ${isActive ? styles.active : ""}`}
@@ -48,19 +66,17 @@ const FAQItem = ({
         {question}
       </h4>
 
-      <AnimatePresence>
-        {isActive && (
-          <motion.div
-            className={styles.answer}
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-          >
-            <p>{answer}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <motion.div
+        className={styles.answer}
+        initial={false}
+        animate={{
+          opacity: isActive ? 1 : 0,
+          height: isDesktop ? "fit-content" : isActive ? "auto" : 0,
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <p>{answer}</p>
+      </motion.div>
     </div>
   );
 };
