@@ -12,6 +12,15 @@ O projeto também incluiu **animações** em todas as seções e um **efeito de 
 
 ---
 
+## 💡 Observações
+
+- Este projeto foi desenvolvido com atenção a **boas práticas de desenvolvimento front-end**, incluindo modularização de código, tipagem TypeScript e performance.
+- O **efeito de água** foi implementado como um bônus, reforçando a capacidade de criar elementos interativos e visuais.
+- Animações do header feita direto no SCSS para comprovar conhecimento sem necessidade de bibliotecas de animação;
+- Animação do hero feita direto no SCSS para garantir velocidade no carregamento, já que é um dos primeiros conteúdos da página;
+
+---
+
 ## 🛠 Tecnologias utilizadas
 
 - ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white) **Next.js** - Framework React para SSR/SSG e otimização de performance.
@@ -112,14 +121,6 @@ http://localhost:3000
 ├── tsconfig.json
 └── yarn.lock
 ```
-
----
-
-## 💡 Observações
-
-- Este projeto foi desenvolvido com atenção a **boas práticas de desenvolvimento front-end**, incluindo modularização de código, tipagem TypeScript e performance.
-- O **efeito de água** foi implementado como um bônus, reforçando a capacidade de criar elementos interativos e visuais.
-- Estrutura preparada para **fácil manutenção e escalabilidade futura**.
 
 ---
 
